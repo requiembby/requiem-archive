@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "requiem-archive"
+version = "0.1.0"
+description = "Archive-only Wayback recovery desktop tool"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "requiembby"}]
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3", "beautifulsoup4>=4.12,<5", "PySide6>=6.7,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+requiem-archive = "requiem_archive.ui:main"
+
+[tool.setuptools.packages.find]
+include = ["requiem_archive*"]
+
+[project.urls]
+Repository = "https://github.com/requiembby/requiem-archive"
+Issues = "https://github.com/requiembby/requiem-archive/issues"
